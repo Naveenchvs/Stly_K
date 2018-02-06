@@ -80,6 +80,7 @@ struct Constants{
     
     static let kUserIdentifier = "WardroberUserIdentifier"
     static let kUserNotSignedIn = "UserNotSignedIn"
+    static let kUserNotSignedInFromItemDetailVC = "UserNotSignedInFromItemDetailVC"
 
     
     static let kAddedToWardrobeNotification = "addedToWardrobe"

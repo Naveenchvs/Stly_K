@@ -189,8 +189,8 @@ class ItemDetailCollectionViewCell: UICollectionViewCell, customCollectionViewDe
         delegate?.shareBtnTapped!(sender: sender)
     }
     
-    @IBAction func wardrobeBtnTapped(){
-        
+    @IBAction func wardrobeBtnTapped()
+    {
         let userSignedIn =   UserDefaults.standard.bool(forKey: Constants.kUserSuccessfullySignedIn)
         
         if userSignedIn == false

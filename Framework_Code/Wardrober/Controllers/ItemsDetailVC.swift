@@ -1146,7 +1146,7 @@ class ItemsDetailVC: UIViewController, UICollectionViewDataSource, UICollectionV
     
     func itemDetailCellNeedsLogin(_ cell: ItemDetailCollectionViewCell!)
     {
-        NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedIn), object: nil, userInfo: nil)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedInFromItemDetailVC), object: nil, userInfo: nil)
     }
     
     func shareBtnTapped(sender : Any)

@@ -11,6 +11,7 @@ import UIKit
 enum ACTION_AFTER_LOGIN
 {
     case wardrobe_SHOW
+    case address_SHOW
     case none
 }
 
@@ -234,10 +235,9 @@ extension SlideMenuVC
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath)
     {
-        
         tableView.deselectRow(at: indexPath, animated: false)
     
-        /*if indexPath.row == 0
+        if indexPath.row == 0
         {
             if userSignedIn == false
             {
@@ -261,7 +261,7 @@ extension SlideMenuVC
         else if indexPath.row == 2
         {
             self.homeContainerVC.presentTutorial()
-        }*/
+        }
             
         if indexPath.row == 3
         {
@@ -289,24 +289,22 @@ extension SlideMenuVC
     
     func presentSignIn()
     {
-        print("login tapped")
+    
+        let storyBoard = UIStoryboard(name: "SignIn", bundle: Bundle(for: Wardrober.self))
+        let siginController = storyBoard.instantiateViewController(withIdentifier: "singIn") as? SignInController
         
-        let storyBoard = UIStoryboard(name: "SignIn", bundle:nil)
-        let siginNavController = storyBoard.instantiateViewController(withIdentifier: "signInNavigationController") as? UINavigationController
+        siginController!.delegate = self
         
+        let signNavigationVC = UINavigationController.init(rootViewController: siginController!)
         
-        print("siginNavController loaded")
-        
-        let signInController = siginNavController?.viewControllers[0] as? SignInController
-        signInController!.delegate = self
-        
-        print("after siginNavController loaded")
-        
-        
-        self.present(siginNavController!, animated: true, completion:
+        self.present(signNavigationVC, animated: true, completion:
         {
-            print("after siginNavController animation finished")
+            
         })
+        
+        //let signNavigationVC = UINavigationController.init(rootViewController: siginController!)
+        //let siginNavController = storyBoard.instantiateViewController(withIdentifier: "") as? UINavigationController
+        //let signInController = siginNavController?.viewControllers[0] as? SignInController
     }
     
     // MARK: - SignInDelegate methods

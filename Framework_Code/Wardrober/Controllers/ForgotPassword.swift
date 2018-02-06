@@ -36,7 +36,7 @@ class ForgotPassword: UIViewController
         forgotBtn.layer.cornerRadius = 20.0
         
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityView.color = UIColor.blue
+        activityView.color = UIColor.black
         activityView.center = self.view.center
         
         self.view.addSubview(activityView)
@@ -106,10 +106,10 @@ class ForgotPassword: UIViewController
             
             let task = session.dataTask(with: request as URLRequest) { data, response, error in
                 
-                self.activityView.stopAnimating()
-                
                 guard data != nil else
                 {
+                    self.activityView.stopAnimating()
+                    
                     print("no data found: \(String(describing: error))")
                     return
                 }
@@ -126,13 +126,15 @@ class ForgotPassword: UIViewController
                             {
                                 if message == "Your password has been sent to the email ID entered"
                                 {
+                                    self.activityView.stopAnimating()
+                                    
                                     self.emailTextField.text = nil
                                     self.showAlertView("Stanley Korshok", AlertMessage: "Your password has been sent to your email ID", AlertButtonTitle: "Ok")
                                 }
                                     
                                 else
                                 {
-                                    
+                                    self.activityView.stopAnimating()
                                     self.showAlertView("Stanley Korshok", AlertMessage: "User doesn't exist", AlertButtonTitle: "Ok")
                                     
                                 }
@@ -142,6 +144,8 @@ class ForgotPassword: UIViewController
                     else
                     {
                         //Failed
+                        self.activityView.stopAnimating()
+                        
                         let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                         print("Error could not parse JSON: \(String(describing: jsonStr))")
                     }
@@ -149,6 +153,8 @@ class ForgotPassword: UIViewController
                     
                 catch let parseError
                 {
+                    self.activityView.stopAnimating()
+                    
                     let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                     print("Error could not parse JSON: '\(String(describing: jsonStr))'")
                 }

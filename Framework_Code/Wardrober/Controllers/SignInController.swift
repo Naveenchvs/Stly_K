@@ -56,7 +56,7 @@ class SignInController: UIViewController, UITextFieldDelegate
         self.view.addGestureRecognizer(hideKeyBoardGesture)
         
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityView.color = UIColor.blue
+        activityView.color = UIColor.black
         activityView.center = self.view.center
         
         self.view.addSubview(activityView)
@@ -216,10 +216,10 @@ class SignInController: UIViewController, UITextFieldDelegate
                 
                 let task = session.dataTask(with: request as URLRequest) { data, response, error in
                     
-                    self.activityView.stopAnimating()
-                    
                     guard data != nil else
                     {
+                        self.activityView.stopAnimating()
+                        
                         print("no data found: \(String(describing: error))")
                         return
                     }
@@ -236,6 +236,8 @@ class SignInController: UIViewController, UITextFieldDelegate
                                 {
                                     //self.appDelegate.hideAcitivyIndicator()
                                     
+                                    self.activityView.stopAnimating()
+                                    
                                     UserDefaults.standard.set(true, forKey: Constants.kUserSuccessfullySignedIn)
                                     UserDefaults.standard.setValue(custID, forKey: Constants.kSignedInUserID)
                                     UserDefaults.standard.synchronize()
@@ -250,11 +252,15 @@ class SignInController: UIViewController, UITextFieldDelegate
                                     
                                     if message != nil
                                     {
-                                        self.showAlertView("Stanley Korshok", AlertMessage: message! as NSString, AlertButtonTitle: "Ok")
+                                        self.activityView.stopAnimating()
+                                        
+                                        self.showAlertView("Error", AlertMessage: message! as NSString, AlertButtonTitle: "Ok")
                                     }
                                     else
                                     {
-                                        self.showAlertView("Stanley Korshok", AlertMessage: "Unknown Error", AlertButtonTitle: "Ok")
+                                        self.activityView.stopAnimating()
+                                        
+                                        self.showAlertView("Error", AlertMessage: "Unknown Error", AlertButtonTitle: "Ok")
                                     }
                                 }
                             }
@@ -263,6 +269,8 @@ class SignInController: UIViewController, UITextFieldDelegate
                         else
                         {
                             //Failed
+                            self.activityView.stopAnimating()
+                            
                             let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                             print("Error could not parse JSON: \(String(describing: jsonStr))")
                         }
@@ -270,6 +278,8 @@ class SignInController: UIViewController, UITextFieldDelegate
                         
                     catch let parseError
                     {
+                        self.activityView.stopAnimating()
+                        
                         let jsonStr = NSString(data: data!, encoding: String.Encoding.utf8.rawValue)
                         print("Error could not parse JSON: '\(String(describing: jsonStr))'")
                     }

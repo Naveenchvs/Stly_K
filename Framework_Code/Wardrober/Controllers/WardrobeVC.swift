@@ -878,8 +878,8 @@ class WardrobeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         
         if userSignedIn == false
         {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedIn), object: nil, userInfo: nil)
-            return
+             self.presentSignIn()
+             return
         }
         else
         {
@@ -958,7 +958,7 @@ class WardrobeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
         }
     }
 
-    @objc func presentSignIn()
+    func presentSignIn()
     {
         NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedIn), object: nil, userInfo: nil)
         
@@ -3951,18 +3951,15 @@ class WardrobeVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
                 }
                 else if self.itemTagDragVC.wardrobeView.frame.contains(self.itemTagDragVC.productContainerView.center) == true && currentItemSelectedForInfoView?.isAddedToWardrobe == false
                 {
-                    ////Wardrobe
+                    //Wardrobe
                     
-                    
-                    let _ = true
-//                    let userSignedIn =   UserDefaults.standard.bool(forKey: Constants.kUserSuccessfullySignedIn)
-                    
-//                    if userSignedIn == false
-//                    {
-//                        self.presentSignIn()
-//                        self.performCancelTagDragAnimation()
-//                        return
-//                    }
+                    let userSignedIn =   UserDefaults.standard.bool(forKey: Constants.kUserSuccessfullySignedIn)
+                    if userSignedIn == false
+                    {
+                        self.presentSignIn()
+                        self.performCancelTagDragAnimation()
+                        return
+                    }
                     
                     self.performTagAddedToWardrobeAnimation()
                     

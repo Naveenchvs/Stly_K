@@ -1104,7 +1104,7 @@ class ModelVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIG
         
         if userSignedIn == false
         {
-            NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedIn), object: nil, userInfo: nil)
+            self.presentSignIn()
             return
         }
         else
@@ -1207,7 +1207,7 @@ class ModelVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UIG
     
     // MARK: - SignIn Service Calls
     
-    @objc func presentSignIn()
+    func presentSignIn()
     {
         NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserNotSignedIn), object: nil, userInfo: nil)
         

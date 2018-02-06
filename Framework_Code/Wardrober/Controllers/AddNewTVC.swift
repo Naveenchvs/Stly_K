@@ -56,7 +56,7 @@ class AddNewTVC: UITableViewController
         pinCodeTF.inputAccessoryView = doneToolbar
         
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityView.color = UIColor.blue
+        activityView.color = UIColor.black
         activityView.center = self.view.center
         
         self.view.addSubview(activityView)

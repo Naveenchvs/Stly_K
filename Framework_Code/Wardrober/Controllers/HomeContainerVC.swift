@@ -58,7 +58,7 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
         NotificationCenter.default.addObserver(self, selector: #selector(HomeContainerVC.itemsPresentInCartCount), name: NSNotification.Name(rawValue: Constants.kItemsPresentInCartNotification), object: nil)
         
         activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
-        activityView.color = UIColor.blue
+        activityView.color = UIColor.black
         activityView.center = self.view.center
         
         self.view.addSubview(activityView)
@@ -93,6 +93,10 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
         NotificationCenter.default.addObserver(self, selector: #selector(HomeContainerVC.checkOutBtnTapped(_:)), name: NSNotification.Name(rawValue: Constants.kCheckOutBtnTappedNotif) , object: nil)
         
         NotificationCenter.default.addObserver(self, selector: #selector(HomeContainerVC.loadSignController), name: NSNotification.Name(rawValue: Constants.kUserNotSignedIn) , object: nil)
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(HomeContainerVC.loadSignControllerFromItemDetailVC), name: NSNotification.Name(rawValue: Constants.kUserNotSignedInFromItemDetailVC) , object: nil)
+        
+        
 
         self.presentHomeNavigationController();
         self.loadSlideMenuVC()
@@ -479,13 +483,30 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
         }
         else
         {
+           self.actionAfterLogin = ACTION_AFTER_LOGIN.address_SHOW
            self.presentSignController()
         }
     }
     
+    @objc func presentSignController()
+    {
+        self.presentSignInVC()
+    }
+    
     @objc func loadSignController()
     {
-        
+        self.actionAfterLogin = ACTION_AFTER_LOGIN.wardrobe_SHOW
+        self.presentSignInVC()
+    }
+    
+    @objc func loadSignControllerFromItemDetailVC()
+    {
+        self.actionAfterLogin = ACTION_AFTER_LOGIN.none
+        self.presentSignInVC()
+    }
+    
+    func presentSignInVC()
+    {
         let storyBoard = UIStoryboard(name: "SignIn", bundle:Bundle(for: Wardrober.self))
         let siginController = storyBoard.instantiateViewController(withIdentifier: "singIn") as? SignInController
         siginController!.delegate = self
@@ -494,7 +515,6 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
         
         self.present(signNavigationVC, animated: true, completion: nil)
     }
-    
     // MARK: - SignInDelegate methods
     
     func signInControllerDidLogin(_ signInVC: SignInController)
@@ -511,8 +531,10 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
                     
                     self.WardrobeTapped(self.wardrobeButton)
                 }
-                else
+                else if self.actionAfterLogin == ACTION_AFTER_LOGIN.address_SHOW
                 {
+                    self.actionAfterLogin = .none
+                    
                     self.getAddressService()
                 }
             }
@@ -533,8 +555,10 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
                         
                     self.WardrobeTapped(self.wardrobeButton)
                 }
-                else
+                else if self.actionAfterLogin == ACTION_AFTER_LOGIN.address_SHOW
                 {
+                    self.actionAfterLogin = .none
+                    
                     self.getAddressService()
                 }
             }
@@ -617,16 +641,7 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
         })
     }
     
-    @objc func presentSignController()
-    {
-        let storyBoard = UIStoryboard(name: "SignIn", bundle:Bundle(for: Wardrober.self))
-        let siginController = storyBoard.instantiateViewController(withIdentifier: "singIn") as? SignInController
-        siginController!.delegate = self
-        
-        let signNavigationVC = UINavigationController.init(rootViewController: siginController!)
-        
-        self.present(signNavigationVC, animated: true, completion: nil)
-    }
+   
     
     func presentaddContainer()
     {
