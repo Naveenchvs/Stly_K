@@ -163,7 +163,12 @@ class DefaultAddressVC: UIViewController,UITableViewDelegate,UITableViewDataSour
     
     func selectedDeliveryAddress(atSelectedIndex: Int)
     {
-        let _ = ["selectedDeliveryAddress" : addresses[atSelectedIndex]]
+        let selectedAddress = ["selectedDeliveryAddress" : addresses[atSelectedIndex]]
+
+        let storyBoard = UIStoryboard(name: "Checkout", bundle:Bundle(for: Wardrober.self))
+        let paymentVC = storyBoard.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentVC
+        paymentVC?.selecetedShippingAddresses = selectedAddress
+        self.navigationController?.pushViewController(paymentVC!, animated: true)
     }
   
     func editSelectedAddress(atSelectedIndex: Int)

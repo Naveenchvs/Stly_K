@@ -25,6 +25,29 @@
 		84F540451FE7DECB0082EEDC /* FAAnimatedHanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F540441FE7DECB0082EEDC /* FAAnimatedHanger.swift */; };
 		B04DD853200E03D000B2F904 /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04DD852200E03CE00B2F904 /* PaymentViewController.swift */; };
 		B06A5518200E11D3009276A2 /* CommonValidation.swift in Sources */ = {isa = PBXBuildFile; fileRef = B06A5517200E11D0009276A2 /* CommonValidation.swift */; };
+		B0795AF8202AD19800403F80 /* AcceptSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0795ADB202AD19600403F80 /* AcceptSDK.framework */; };
+		B0795AF9202AD19800403F80 /* AcceptSDKBaseInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795ADE202AD19700403F80 /* AcceptSDKBaseInterfaceBuilder.swift */; };
+		B0795AFA202AD19800403F80 /* AcceptSDKBaseURLBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795ADF202AD19700403F80 /* AcceptSDKBaseURLBuilder.swift */; };
+		B0795AFB202AD19800403F80 /* AcceptSDKTokenAPIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE0202AD19700403F80 /* AcceptSDKTokenAPIBuilder.swift */; };
+		B0795AFC202AD19800403F80 /* AcceptSDKTokenInterfaceBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE1202AD19700403F80 /* AcceptSDKTokenInterfaceBuilder.swift */; };
+		B0795AFD202AD19800403F80 /* AcceptSDK.h in Headers */ = {isa = PBXBuildFile; fileRef = B0795AE2202AD19700403F80 /* AcceptSDK.h */; };
+		B0795AFE202AD19800403F80 /* AcceptSDKHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE3202AD19700403F80 /* AcceptSDKHandler.swift */; };
+		B0795AFF202AD19800403F80 /* AcceptSDKInternal.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE4202AD19700403F80 /* AcceptSDKInternal.swift */; };
+		B0795B00202AD19800403F80 /* AcceptSDKSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE5202AD19700403F80 /* AcceptSDKSettings.swift */; };
+		B0795B01202AD19800403F80 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0795AE6202AD19700403F80 /* Info.plist */; };
+		B0795B02202AD19800403F80 /* AcceptSDKBaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE8202AD19700403F80 /* AcceptSDKBaseInterface.swift */; };
+		B0795B03202AD19800403F80 /* AcceptSDKTokenInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AE9202AD19700403F80 /* AcceptSDKTokenInterface.swift */; };
+		B0795B04202AD19800403F80 /* AccepSDKtHttp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AEB202AD19700403F80 /* AccepSDKtHttp.swift */; };
+		B0795B05202AD19800403F80 /* AcceptSDKHttpConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AEC202AD19700403F80 /* AcceptSDKHttpConnection.swift */; };
+		B0795B06202AD19800403F80 /* AcceptSDKPaymentRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AEE202AD19700403F80 /* AcceptSDKPaymentRequest.swift */; };
+		B0795B07202AD19800403F80 /* FingerPrint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AEF202AD19700403F80 /* FingerPrint.swift */; };
+		B0795B08202AD19800403F80 /* MerchantAuthenticaton.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF0202AD19700403F80 /* MerchantAuthenticaton.swift */; };
+		B0795B09202AD19800403F80 /* SecurePaymentContainerRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF1202AD19700403F80 /* SecurePaymentContainerRequest.swift */; };
+		B0795B0A202AD19800403F80 /* AcceptSDKErrorResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF3202AD19700403F80 /* AcceptSDKErrorResponse.swift */; };
+		B0795B0B202AD19800403F80 /* AcceptSDKTokenResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF4202AD19700403F80 /* AcceptSDKTokenResponse.swift */; };
+		B0795B0C202AD19800403F80 /* AcceptSDKCardFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF6202AD19700403F80 /* AcceptSDKCardFieldsValidator.swift */; };
+		B0795B0D202AD19800403F80 /* AcceptSDKStringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF7202AD19700403F80 /* AcceptSDKStringValidator.swift */; };
+		B0795B0F202AD1AE00403F80 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B0E202AD1AE00403F80 /* PaymentVC.swift */; };
 		B07C04DA1EF287020005D944 /* FAProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04D91EF287020005D944 /* FAProgressHud.swift */; };
 		B07C04F01EF2870D0005D944 /* FAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04DB1EF2870D0005D944 /* FAImage.swift */; };
 		B07C04F11EF2870D0005D944 /* FAIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04DC1EF2870D0005D944 /* FAIndicator.swift */; };
@@ -152,6 +175,29 @@
 		84F540441FE7DECB0082EEDC /* FAAnimatedHanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAAnimatedHanger.swift; sourceTree = "<group>"; };
 		B04DD852200E03CE00B2F904 /* PaymentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
 		B06A5517200E11D0009276A2 /* CommonValidation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonValidation.swift; sourceTree = "<group>"; };
+		B0795ADB202AD19600403F80 /* AcceptSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = AcceptSDK.framework; sourceTree = "<group>"; };
+		B0795ADE202AD19700403F80 /* AcceptSDKBaseInterfaceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKBaseInterfaceBuilder.swift; sourceTree = "<group>"; };
+		B0795ADF202AD19700403F80 /* AcceptSDKBaseURLBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKBaseURLBuilder.swift; sourceTree = "<group>"; };
+		B0795AE0202AD19700403F80 /* AcceptSDKTokenAPIBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKTokenAPIBuilder.swift; sourceTree = "<group>"; };
+		B0795AE1202AD19700403F80 /* AcceptSDKTokenInterfaceBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKTokenInterfaceBuilder.swift; sourceTree = "<group>"; };
+		B0795AE2202AD19700403F80 /* AcceptSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AcceptSDK.h; sourceTree = "<group>"; };
+		B0795AE3202AD19700403F80 /* AcceptSDKHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKHandler.swift; sourceTree = "<group>"; };
+		B0795AE4202AD19700403F80 /* AcceptSDKInternal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKInternal.swift; sourceTree = "<group>"; };
+		B0795AE5202AD19700403F80 /* AcceptSDKSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKSettings.swift; sourceTree = "<group>"; };
+		B0795AE6202AD19700403F80 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B0795AE8202AD19700403F80 /* AcceptSDKBaseInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKBaseInterface.swift; sourceTree = "<group>"; };
+		B0795AE9202AD19700403F80 /* AcceptSDKTokenInterface.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKTokenInterface.swift; sourceTree = "<group>"; };
+		B0795AEB202AD19700403F80 /* AccepSDKtHttp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccepSDKtHttp.swift; sourceTree = "<group>"; };
+		B0795AEC202AD19700403F80 /* AcceptSDKHttpConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKHttpConnection.swift; sourceTree = "<group>"; };
+		B0795AEE202AD19700403F80 /* AcceptSDKPaymentRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKPaymentRequest.swift; sourceTree = "<group>"; };
+		B0795AEF202AD19700403F80 /* FingerPrint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerPrint.swift; sourceTree = "<group>"; };
+		B0795AF0202AD19700403F80 /* MerchantAuthenticaton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MerchantAuthenticaton.swift; sourceTree = "<group>"; };
+		B0795AF1202AD19700403F80 /* SecurePaymentContainerRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SecurePaymentContainerRequest.swift; sourceTree = "<group>"; };
+		B0795AF3202AD19700403F80 /* AcceptSDKErrorResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKErrorResponse.swift; sourceTree = "<group>"; };
+		B0795AF4202AD19700403F80 /* AcceptSDKTokenResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKTokenResponse.swift; sourceTree = "<group>"; };
+		B0795AF6202AD19700403F80 /* AcceptSDKCardFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKCardFieldsValidator.swift; sourceTree = "<group>"; };
+		B0795AF7202AD19700403F80 /* AcceptSDKStringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKStringValidator.swift; sourceTree = "<group>"; };
+		B0795B0E202AD1AE00403F80 /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
 		B07C04D91EF287020005D944 /* FAProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAProgressHud.swift; sourceTree = "<group>"; };
 		B07C04DB1EF2870D0005D944 /* FAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImage.swift; sourceTree = "<group>"; };
 		B07C04DC1EF2870D0005D944 /* FAIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIndicator.swift; sourceTree = "<group>"; };
@@ -256,6 +302,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0795AF8202AD19800403F80 /* AcceptSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +317,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B0795ADC202AD19700403F80 /* AcceptSDK */ = {
+			isa = PBXGroup;
+			children = (
+				B0795ADD202AD19700403F80 /* AcceptBuilder */,
+				B0795AE2202AD19700403F80 /* AcceptSDK.h */,
+				B0795AE3202AD19700403F80 /* AcceptSDKHandler.swift */,
+				B0795AE4202AD19700403F80 /* AcceptSDKInternal.swift */,
+				B0795AE5202AD19700403F80 /* AcceptSDKSettings.swift */,
+				B0795AE6202AD19700403F80 /* Info.plist */,
+				B0795AE7202AD19700403F80 /* Interface */,
+				B0795AEA202AD19700403F80 /* Network */,
+				B0795AED202AD19700403F80 /* Request */,
+				B0795AF2202AD19700403F80 /* Response */,
+				B0795AF5202AD19700403F80 /* Validators */,
+			);
+			path = AcceptSDK;
+			sourceTree = "<group>";
+		};
+		B0795ADD202AD19700403F80 /* AcceptBuilder */ = {
+			isa = PBXGroup;
+			children = (
+				B0795ADE202AD19700403F80 /* AcceptSDKBaseInterfaceBuilder.swift */,
+				B0795ADF202AD19700403F80 /* AcceptSDKBaseURLBuilder.swift */,
+				B0795AE0202AD19700403F80 /* AcceptSDKTokenAPIBuilder.swift */,
+				B0795AE1202AD19700403F80 /* AcceptSDKTokenInterfaceBuilder.swift */,
+			);
+			path = AcceptBuilder;
+			sourceTree = "<group>";
+		};
+		B0795AE7202AD19700403F80 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				B0795AE8202AD19700403F80 /* AcceptSDKBaseInterface.swift */,
+				B0795AE9202AD19700403F80 /* AcceptSDKTokenInterface.swift */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		B0795AEA202AD19700403F80 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				B0795AEB202AD19700403F80 /* AccepSDKtHttp.swift */,
+				B0795AEC202AD19700403F80 /* AcceptSDKHttpConnection.swift */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B0795AED202AD19700403F80 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+				B0795AEE202AD19700403F80 /* AcceptSDKPaymentRequest.swift */,
+				B0795AEF202AD19700403F80 /* FingerPrint.swift */,
+				B0795AF0202AD19700403F80 /* MerchantAuthenticaton.swift */,
+				B0795AF1202AD19700403F80 /* SecurePaymentContainerRequest.swift */,
+			);
+			path = Request;
+			sourceTree = "<group>";
+		};
+		B0795AF2202AD19700403F80 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				B0795AF3202AD19700403F80 /* AcceptSDKErrorResponse.swift */,
+				B0795AF4202AD19700403F80 /* AcceptSDKTokenResponse.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		B0795AF5202AD19700403F80 /* Validators */ = {
+			isa = PBXGroup;
+			children = (
+				B0795AF6202AD19700403F80 /* AcceptSDKCardFieldsValidator.swift */,
+				B0795AF7202AD19700403F80 /* AcceptSDKStringValidator.swift */,
+			);
+			path = Validators;
+			sourceTree = "<group>";
+		};
 		B07C04D61EF286CB0005D944 /* FAServiceClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -336,6 +459,8 @@
 		C524E20F1ECB1BB100F7D45B /* Wardrober */ = {
 			isa = PBXGroup;
 			children = (
+				B0795ADC202AD19700403F80 /* AcceptSDK */,
+				B0795ADB202AD19600403F80 /* AcceptSDK.framework */,
 				B07C04D81EF286EF0005D944 /* FAProgressHud */,
 				B07C04D71EF286DF0005D944 /* FAImageDownloader */,
 				B07C04D61EF286CB0005D944 /* FAServiceClass */,
@@ -428,6 +553,7 @@
 				842A129D2004FBAC007BB5D7 /* DefaultAddressVC.swift */,
 				C5312F9B1EEAB7BE0086AF70 /* PopupVC.swift */,
 				B04DD852200E03CE00B2F904 /* PaymentViewController.swift */,
+				B0795B0E202AD1AE00403F80 /* PaymentVC.swift */,
 				C5312FA11EEAB7BE0086AF70 /* VixrTutorial */,
 			);
 			path = Controllers;
@@ -504,6 +630,7 @@
 			files = (
 				B07C05041EF2870D0005D944 /* Fashion.h in Headers */,
 				C524E21E1ECB1BB100F7D45B /* Wardrober.h in Headers */,
+				B0795AFD202AD19800403F80 /* AcceptSDK.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -592,6 +719,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B0795B01202AD19800403F80 /* Info.plist in Resources */,
 				C524E2B51ECB1BFA00F7D45B /* Assets.xcassets in Resources */,
 				842A129A2004F917007BB5D7 /* Address.storyboard in Resources */,
 				C5312FFC1EEAB8110086AF70 /* Tutorial.storyboard in Resources */,
@@ -619,6 +747,7 @@
 			files = (
 				B07C04FD1EF2870D0005D944 /* Fashion.swift in Sources */,
 				C5312F801EEAB7AC0086AF70 /* FACategoryCellType1.swift in Sources */,
+				B0795B06202AD19800403F80 /* AcceptSDKPaymentRequest.swift in Sources */,
 				B07C04F91EF2870D0005D944 /* FashionManager.swift in Sources */,
 				B07C04F21EF2870D0005D944 /* FAImageCache.swift in Sources */,
 				B07C04FA1EF2870D0005D944 /* FashionOptionsInfo.swift in Sources */,
@@ -627,13 +756,16 @@
 				C5312FB11EEAB7BE0086AF70 /* HomeContainerVC.swift in Sources */,
 				C5312FC11EEAB7BE0086AF70 /* FATutorialPageBase.swift in Sources */,
 				C5312F791EEAB7AC0086AF70 /* CartInnerView.swift in Sources */,
+				B0795B03202AD19800403F80 /* AcceptSDKTokenInterface.swift in Sources */,
 				C5312FB41EEAB7BE0086AF70 /* LandingPageVer2VC.swift in Sources */,
 				B07C04F61EF2870D0005D944 /* FACacheSerializer.swift in Sources */,
 				C5312FE71EEAB7F50086AF70 /* FACategory.swift in Sources */,
+				B0795B0C202AD19800403F80 /* AcceptSDKCardFieldsValidator.swift in Sources */,
 				C5312F8F1EEAB7AC0086AF70 /* SizesCell.swift in Sources */,
 				B07C04F41EF2870D0005D944 /* FAImagePrefetcher.swift in Sources */,
 				C5312FF01EEAB7F50086AF70 /* ShoppingCart.swift in Sources */,
 				B07C04DA1EF287020005D944 /* FAProgressHud.swift in Sources */,
+				B0795B09202AD19800403F80 /* SecurePaymentContainerRequest.swift in Sources */,
 				C5312FE51EEAB7F50086AF70 /* ClothingStyle.swift in Sources */,
 				B07C04F81EF2870D0005D944 /* FAImageTransition.swift in Sources */,
 				C5312FD11EEAB7D10086AF70 /* CreateAccountHelper.swift in Sources */,
@@ -642,12 +774,15 @@
 				842A12A32004FC1C007BB5D7 /* FloatLabelTextView.swift in Sources */,
 				84F540451FE7DECB0082EEDC /* FAAnimatedHanger.swift in Sources */,
 				C5312FB21EEAB7BE0086AF70 /* ItemsDetailVC.swift in Sources */,
+				B0795B02202AD19800403F80 /* AcceptSDKBaseInterface.swift in Sources */,
 				C5312F7B1EEAB7AC0086AF70 /* CheckoutCell.swift in Sources */,
 				B07C04F71EF2870D0005D944 /* FARequestModifier.swift in Sources */,
 				C5312FAC1EEAB7BE0086AF70 /* BaseNavigationController.swift in Sources */,
+				B0795AFF202AD19800403F80 /* AcceptSDKInternal.swift in Sources */,
 				C5312FD01EEAB7D10086AF70 /* CommonHelper.swift in Sources */,
 				B07C05031EF2870D0005D944 /* FAAnimatedImageView.swift in Sources */,
 				B07C050A1EF287830005D944 /* UIImage+UIImage_ContentBounds.swift in Sources */,
+				B0795AF9202AD19800403F80 /* AcceptSDKBaseInterfaceBuilder.swift in Sources */,
 				C5312FCE1EEAB7D10086AF70 /* ArrayExtension.swift in Sources */,
 				842A129E2004FBAC007BB5D7 /* DefaultAddressVC.swift in Sources */,
 				C5312F7E1EEAB7AC0086AF70 /* CustomSizesView.swift in Sources */,
@@ -656,6 +791,7 @@
 				C5312FEC1EEAB7F50086AF70 /* ItemAssetSpecs.swift in Sources */,
 				C5312F861EEAB7AC0086AF70 /* FAFillColorButton.swift in Sources */,
 				C5312FBB1EEAB7BE0086AF70 /* TagDragDropVC.swift in Sources */,
+				B0795B00202AD19800403F80 /* AcceptSDKSettings.swift in Sources */,
 				C5312FE41EEAB7F50086AF70 /* ClothingItemImageView.swift in Sources */,
 				C5312FB61EEAB7BE0086AF70 /* PopupVC.swift in Sources */,
 				842A12AB200509D8007BB5D7 /* ForgotPassword.swift in Sources */,
@@ -663,6 +799,7 @@
 				B07C05011EF2870D0005D944 /* String+FA5.swift in Sources */,
 				C5312FEE1EEAB7F50086AF70 /* ShoeItem.swift in Sources */,
 				B07C04FF1EF2870D0005D944 /* UIButton+Fashion.swift in Sources */,
+				B0795AFC202AD19800403F80 /* AcceptSDKTokenInterfaceBuilder.swift in Sources */,
 				C5312FAE1EEAB7BE0086AF70 /* FALaunchVC.swift in Sources */,
 				B07C04F11EF2870D0005D944 /* FAIndicator.swift in Sources */,
 				B07C04F31EF2870D0005D944 /* FAImageDownloader.swift in Sources */,
@@ -680,6 +817,7 @@
 				C5312FC51EEAB7BE0086AF70 /* WardrobeVC.swift in Sources */,
 				8413BFD320061DDE005BECAB /* SignInDelegate.swift in Sources */,
 				B07C04F51EF2870D0005D944 /* FAImageProcessor.swift in Sources */,
+				B0795B0B202AD19800403F80 /* AcceptSDKTokenResponse.swift in Sources */,
 				C5312FEF1EEAB7F50086AF70 /* ShoeItemCell.swift in Sources */,
 				C5312F7D1EEAB7AC0086AF70 /* CustomCollectionView.swift in Sources */,
 				C5312F891EEAB7AC0086AF70 /* ItemInfoView.swift in Sources */,
@@ -691,7 +829,11 @@
 				84CFBBC92008923C00C3AE70 /* AddContainerVC.swift in Sources */,
 				C5312FBA1EEAB7BE0086AF70 /* SlideMenuVC.swift in Sources */,
 				C5312F851EEAB7AC0086AF70 /* FADotView.swift in Sources */,
+				B0795AFA202AD19800403F80 /* AcceptSDKBaseURLBuilder.swift in Sources */,
+				B0795B07202AD19800403F80 /* FingerPrint.swift in Sources */,
+				B0795B04202AD19800403F80 /* AccepSDKtHttp.swift in Sources */,
 				C5312FB51EEAB7BE0086AF70 /* ModelVC.swift in Sources */,
+				B0795B0D202AD19800403F80 /* AcceptSDKStringValidator.swift in Sources */,
 				841BB96120074E3600BA8755 /* AddressDetailesHelper.swift in Sources */,
 				B07C04FC1EF2870D0005D944 /* FAResource.swift in Sources */,
 				C5312F8D1EEAB7AC0086AF70 /* PopupCell.swift in Sources */,
@@ -705,14 +847,20 @@
 				C5312FE61EEAB7F50086AF70 /* FACart.swift in Sources */,
 				C5312FE81EEAB7F50086AF70 /* FAModelConfig.swift in Sources */,
 				B07C04F01EF2870D0005D944 /* FAImage.swift in Sources */,
+				B0795AFE202AD19800403F80 /* AcceptSDKHandler.swift in Sources */,
 				C5312FD21EEAB7D10086AF70 /* ItemSizeHelper.swift in Sources */,
 				B07C04FE1EF2870D0005D944 /* ImageView+Fashion.swift in Sources */,
+				B0795B0F202AD1AE00403F80 /* PaymentVC.swift in Sources */,
 				C5312F8A1EEAB7AC0086AF70 /* ItemSizeButton.swift in Sources */,
+				B0795AFB202AD19800403F80 /* AcceptSDKTokenAPIBuilder.swift in Sources */,
 				C5312FBC1EEAB7BE0086AF70 /* FATutorialPage1VC.swift in Sources */,
+				B0795B0A202AD19800403F80 /* AcceptSDKErrorResponse.swift in Sources */,
 				842A12A42004FC1C007BB5D7 /* FloatLabelTextField.swift in Sources */,
 				C5312FEA1EEAB7F50086AF70 /* ItemAssetBounds.swift in Sources */,
 				C5312F8E1EEAB7AC0086AF70 /* ProductSizesCell.swift in Sources */,
 				84CFBBCB2008927900C3AE70 /* AddNewTVC.swift in Sources */,
+				B0795B05202AD19800403F80 /* AcceptSDKHttpConnection.swift in Sources */,
+				B0795B08202AD19800403F80 /* MerchantAuthenticaton.swift in Sources */,
 				C5312F811EEAB7AC0086AF70 /* FACategoryCellType2.swift in Sources */,
 				C5312FE91EEAB7F50086AF70 /* FAWardrobe.swift in Sources */,
 				C5312FB31EEAB7BE0086AF70 /* LandingPageVC.swift in Sources */,
@@ -863,6 +1011,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Wardrober",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = Wardrober/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
@@ -891,6 +1043,10 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Wardrober",
+				);
 				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
 				INFOPLIST_FILE = Wardrober/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
