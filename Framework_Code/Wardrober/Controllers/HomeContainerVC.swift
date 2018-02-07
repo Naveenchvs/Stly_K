@@ -495,7 +495,8 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
     
     @objc func loadSignController()
     {
-        self.actionAfterLogin = ACTION_AFTER_LOGIN.wardrobe_SHOW
+        //self.actionAfterLogin = ACTION_AFTER_LOGIN.wardrobe_SHOW
+        self.actionAfterLogin = ACTION_AFTER_LOGIN.none
         self.presentSignInVC()
     }
     

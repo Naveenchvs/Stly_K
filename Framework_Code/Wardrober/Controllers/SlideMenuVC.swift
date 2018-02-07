@@ -278,6 +278,13 @@ extension SlideMenuVC
                 
                 NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kUserSuccessfullySignedOutNotif), object: nil)
                 
+                FACart.sharedCart().removeAllCartItems()
+                
+                let cartItemsCountDict: [String: Any] = ["cartItemsCount": FACart.sharedCart().getCartCount(), "Notif": "Notif"]
+                
+                NotificationCenter.default.post(name: Notification.Name(rawValue: Constants.kItemsPresentInCartNotification), object: nil, userInfo: cartItemsCountDict)
+
+
                 self.userSignedIn = false
                 
                 sideMenuItemArray[3] = "LOGIN"
