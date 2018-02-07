@@ -50,8 +50,8 @@ fileprivate func <= <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
 
 
 
-let kClientName = "8sjbvNU52Lfr"
-let kClientKey  = "7356sB68Yj6gv5qTzVX69GHrGv3fLBPypEjyRQg9QCB4cKeqRjJ3j58x9VqpLJPx"
+//let kClientName = "8sjbvNU52Lfr"
+//let kClientKey  = "7356sB68Yj6gv5qTzVX69GHrGv3fLBPypEjyRQg9QCB4cKeqRjJ3j58x9VqpLJPx"
 
 let kAcceptSDKDemoCreditCardLength:Int = 16
 let kAcceptSDKDemoCreditCardLengthPlusSpaces:Int = (kAcceptSDKDemoCreditCardLength + 3)
@@ -81,17 +81,59 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
     fileprivate var cardExpirationYear:String!
     fileprivate var cardVerificationCode:String!
     fileprivate var cardNumberBuffer:String!
-    
+    var activityView = UIActivityIndicatorView()
+
     var selecetedShippingAddresses : [String : Address]!
     
+    var kClientName : String = ""
+    var kClientKey : String = ""
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        activityView = UIActivityIndicatorView(activityIndicatorStyle: .whiteLarge)
+        activityView.color = UIColor.black
+        activityView.center = self.view.center
+
+        self.getPaymetAuthenticationCredentials()
         self.setUIControlsTagValues()
         self.initializeUIControls()
         self.initializeMembers()
         self.updateTokenButton(false)
     }
     
+    func getPaymetAuthenticationCredentials()
+    {
+            self.activityView.startAnimating()
+            
+            let urlString = String(format: "%@/GetAuthenticationCredentials", arguments: [Urls.stanleyKorshakUrl]);
+            
+            FAServiceHelper().get(url: urlString, completion : { (success : Bool?, message : String?, responseObject : AnyObject?) in
+                
+                self.activityView.stopAnimating()
+                
+                guard success == true else
+                {
+
+                    return
+                }
+                
+                guard responseObject == nil else
+                {
+                    let paymentCredentials : [Credentials] =  PaymentCredentialsHelper.getAuthenticationHelper(responseObject! as AnyObject?)!
+                    let paymentKeys  = paymentCredentials[0]
+                    
+                    self.kClientName = paymentKeys.apiLoginId
+                    self.kClientKey = paymentKeys.publicClientKey
+                   
+                    return
+                    
+                }
+            })
+      
+        
+        
+    }
     func setUIControlsTagValues() {
         self.cardNumberTextField.tag = 1
         self.expirationMonthTextField.tag = 2
@@ -452,7 +494,6 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
     @IBAction func getTokenButtonTapped(_ sender: AnyObject) {
         self.activityIndicatorAcceptSDKDemo.startAnimating()
         self.updateTokenButton(false)
-        
         self.getToken()
     }
     
@@ -491,6 +532,7 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
                 print("Token--->%@", inResponse.getOpaqueData().getDataValue())
                 var output = String(format: "Response: %@\nData Value: %@ \nDescription: %@", inResponse.getMessages().getResultCode(), inResponse.getOpaqueData().getDataValue(), inResponse.getOpaqueData().getDataDescriptor())
                 output = output + String(format: "\nMessage Code: %@\nMessage Text: %@", inResponse.getMessages().getMessages()[0].getCode(), inResponse.getMessages().getMessages()[0].getText())
+                self.callAddAddressAddOrderDetails()
                // self.textViewShowResults.text = output
                // self.textViewShowResults.textColor = UIColor.green
             })
@@ -503,6 +545,12 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
            // self.textViewShowResults.textColor = UIColor.red
             print(output)
         }
+    }
+    
+    func callAddAddressAddOrderDetails()
+    {
+        
+        
     }
     
     override func didReceiveMemoryWarning() {
