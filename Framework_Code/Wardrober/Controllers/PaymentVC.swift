@@ -9,7 +9,7 @@
 import UIKit
 import AcceptSDK
 
-
+/*
 fileprivate func < <T : Comparable>(lhs: T?, rhs: T?) -> Bool {
     switch (lhs, rhs) {
     case let (l?, r?):
@@ -65,7 +65,7 @@ let kAcceptSDKDemoCreditCardObscureLength:Int = (kAcceptSDKDemoCreditCardLength 
 
 let kAcceptSDKDemoSpace:String = " "
 let kAcceptSDKDemoSlash:String = "/"
-
+*/
 class PaymentVC: UIViewController,UITextFieldDelegate {
     
     @IBOutlet weak var cardNumberTextField:UITextField!
@@ -95,14 +95,14 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
         activityView.color = UIColor.black
         activityView.center = self.view.center
 
-        self.getPaymetAuthenticationCredentials()
+      /*  self.getPaymetAuthenticationCredentials()
         self.setUIControlsTagValues()
         self.initializeUIControls()
         self.initializeMembers()
-        self.updateTokenButton(false)
+        self.updateTokenButton(false)*/
     }
     
-    func getPaymetAuthenticationCredentials()
+   /* func getPaymetAuthenticationCredentials()
     {
             self.activityView.startAnimating()
             
@@ -552,7 +552,7 @@ class PaymentVC: UIViewController,UITextFieldDelegate {
         
         
         
-    }
+    }*/
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

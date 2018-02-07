@@ -166,8 +166,8 @@ class DefaultAddressVC: UIViewController,UITableViewDelegate,UITableViewDataSour
         let selectedAddress = ["selectedDeliveryAddress" : addresses[atSelectedIndex]]
 
         let storyBoard = UIStoryboard(name: "Checkout", bundle:Bundle(for: Wardrober.self))
-        let paymentVC = storyBoard.instantiateViewController(withIdentifier: "PaymentVC") as? PaymentVC
-        paymentVC?.selecetedShippingAddresses = selectedAddress
+        let paymentVC = storyBoard.instantiateViewController(withIdentifier: "PaymentViewController") as? PaymentViewController
+        paymentVC?.selectedAddDict = selectedAddress
         self.navigationController?.pushViewController(paymentVC!, animated: true)
     }
   
