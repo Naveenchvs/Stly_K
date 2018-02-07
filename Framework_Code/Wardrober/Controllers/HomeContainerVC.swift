@@ -42,6 +42,8 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
     var selectedAddDict : [String : Address]!
     
     var activityView = UIActivityIndicatorView()
+    
+    var avilabilities : [CheckAvailablityItems] =  [CheckAvailablityItems]()
 
     override func viewDidLoad()
     {
@@ -473,13 +475,74 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
 
     }
     
+    func checkItemsAvailablity()
+    {
+        var checkAvailablityItems = [[String: String]]()
+        
+        for item in FACart.sharedCart().getCartItems()
+        {
+            var dict = [String : String]()
+            dict["ProductItemID"] = item.itemProductID
+            dict["Size"] = item.sizeSelected?.itemSizeName
+            //print(item.sizeSelected?.itemSizeName!)
+
+            checkAvailablityItems.append(dict)
+        }
+        
+        let cartItems = ["Cartitems" : checkAvailablityItems]
+        print(cartItems)
+        
+        //self.activityView.startAnimating()
+            
+        let urlString = String(format: "http://65.19.149.190/dev.stanleykorshakv1/ClientApi/WardrobeClientApi.svc/CheckProductAvailability")
+        
+        self.avilabilities.removeAll()
+            
+        FAServiceHelper().post(url: urlString, parameters: cartItems as NSDictionary  , completion : { (success : Bool?, message : String?, responseObject : AnyObject?) in
+                
+                //self.activityView.stopAnimating()
+                
+                guard success == true else
+                {
+                    let alert=UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertControllerStyle.alert);
+                    alert.addAction(UIAlertAction(title: "Ok", style: UIAlertActionStyle.cancel, handler: nil));
+                    
+                    self.present(alert, animated: true, completion: nil)
+                    
+                    return
+                }
+                guard responseObject == nil else
+                {
+                    self.avilabilities =  AvailabilityHelper.getAvailabilityHelper(responseObject! as AnyObject?)!
+                    
+                    for item in self.avilabilities
+                    {
+                        let productID = item.productItemID as Int
+                        let avilable = item.avilability
+                        //let avilable = false
+                        let _ = item.size
+                        
+                        if avilable == false
+                        {
+                            print("This ID \(productID), Sold out")
+                            NotificationCenter.default.post(name: Notification.Name(rawValue: "SoldoutAlert"), object: nil)
+                            return
+                        }
+                    }
+                    self.getAddressService()
+                    return
+                }
+            })
+    }
+    
     @objc func checkOutBtnTapped(_ notification: NSNotification)
     {
         let userSignedIn = UserDefaults.standard.bool(forKey: Constants.kUserSuccessfullySignedIn)
         
         if userSignedIn == true
         {
-           self.getAddressService()
+           //self.getAddressService()
+            self.checkItemsAvailablity()
         }
         else
         {
@@ -536,7 +599,8 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
                 {
                     self.actionAfterLogin = .none
                     
-                    self.getAddressService()
+                    //self.getAddressService()
+                    self.checkItemsAvailablity()
                 }
             }
         }
@@ -560,7 +624,8 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
                 {
                     self.actionAfterLogin = .none
                     
-                    self.getAddressService()
+                    //self.getAddressService()
+                    self.checkItemsAvailablity()
                 }
             }
             
@@ -637,7 +702,6 @@ class HomeContainerVC: UIViewController, UINavigationControllerDelegate, FATutor
                     }
                 }
                 return
-                
             }
         })
     }

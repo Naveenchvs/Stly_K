@@ -20,6 +20,8 @@
 		842A12AD200509D8007BB5D7 /* SignUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A12A9200509D7007BB5D7 /* SignUpController.swift */; };
 		842A12AE200509D8007BB5D7 /* SignInController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 842A12AA200509D7007BB5D7 /* SignInController.swift */; };
 		849688632007B43F0068E05F /* Address.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849688622007B43F0068E05F /* Address.swift */; };
+		84A09317202AD253009BD100 /* CheckAvailablityItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A09316202AD253009BD100 /* CheckAvailablityItems.swift */; };
+		84A09319202B033E009BD100 /* AvailabilityHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A09318202B033E009BD100 /* AvailabilityHelper.swift */; };
 		84CFBBC92008923C00C3AE70 /* AddContainerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBBC82008923C00C3AE70 /* AddContainerVC.swift */; };
 		84CFBBCB2008927900C3AE70 /* AddNewTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CFBBCA2008927900C3AE70 /* AddNewTVC.swift */; };
 		84F540451FE7DECB0082EEDC /* FAAnimatedHanger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F540441FE7DECB0082EEDC /* FAAnimatedHanger.swift */; };
@@ -147,6 +149,8 @@
 		842A12A9200509D7007BB5D7 /* SignUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpController.swift; sourceTree = "<group>"; };
 		842A12AA200509D7007BB5D7 /* SignInController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInController.swift; sourceTree = "<group>"; };
 		849688622007B43F0068E05F /* Address.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Address.swift; sourceTree = "<group>"; };
+		84A09316202AD253009BD100 /* CheckAvailablityItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckAvailablityItems.swift; sourceTree = "<group>"; };
+		84A09318202B033E009BD100 /* AvailabilityHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvailabilityHelper.swift; sourceTree = "<group>"; };
 		84CFBBC82008923C00C3AE70 /* AddContainerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddContainerVC.swift; sourceTree = "<group>"; };
 		84CFBBCA2008927900C3AE70 /* AddNewTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNewTVC.swift; sourceTree = "<group>"; };
 		84F540441FE7DECB0082EEDC /* FAAnimatedHanger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAAnimatedHanger.swift; sourceTree = "<group>"; };
@@ -459,6 +463,7 @@
 				C5312FCA1EEAB7D10086AF70 /* CreateAccountHelper.swift */,
 				8413BFD42006576A005BECAB /* LoginHelper.swift */,
 				841BB96020074E3600BA8755 /* AddressDetailesHelper.swift */,
+				84A09318202B033E009BD100 /* AvailabilityHelper.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -479,6 +484,7 @@
 				849688622007B43F0068E05F /* Address.swift */,
 				C5312FE01EEAB7F50086AF70 /* ShoeItem.swift */,
 				C5312FE11EEAB7F50086AF70 /* ShoeItemCell.swift */,
+				84A09316202AD253009BD100 /* CheckAvailablityItems.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -629,6 +635,7 @@
 				C5312F791EEAB7AC0086AF70 /* CartInnerView.swift in Sources */,
 				C5312FB41EEAB7BE0086AF70 /* LandingPageVer2VC.swift in Sources */,
 				B07C04F61EF2870D0005D944 /* FACacheSerializer.swift in Sources */,
+				84A09317202AD253009BD100 /* CheckAvailablityItems.swift in Sources */,
 				C5312FE71EEAB7F50086AF70 /* FACategory.swift in Sources */,
 				C5312F8F1EEAB7AC0086AF70 /* SizesCell.swift in Sources */,
 				B07C04F41EF2870D0005D944 /* FAImagePrefetcher.swift in Sources */,
@@ -689,6 +696,7 @@
 				C5312F871EEAB7AC0086AF70 /* ItemDetailAnimationView.swift in Sources */,
 				C524E2B71ECB1BFA00F7D45B /* Constants.swift in Sources */,
 				84CFBBC92008923C00C3AE70 /* AddContainerVC.swift in Sources */,
+				84A09319202B033E009BD100 /* AvailabilityHelper.swift in Sources */,
 				C5312FBA1EEAB7BE0086AF70 /* SlideMenuVC.swift in Sources */,
 				C5312F851EEAB7AC0086AF70 /* FADotView.swift in Sources */,
 				C5312FB51EEAB7BE0086AF70 /* ModelVC.swift in Sources */,

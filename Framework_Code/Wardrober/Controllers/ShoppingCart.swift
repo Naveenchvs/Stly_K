@@ -96,8 +96,15 @@ class ShoppingCart: UIViewController, CheckoutCellDelegate,UITableViewDataSource
        tapRecogniser.cancelsTouchesInView = false
 
        /*NotificationCenter.default.addObserver(self, selector: #selector(ShoppingCart.selectedAddressSuccessful(_:)), name: NSNotification.Name(rawValue: Constants.kAddressSelectedSuccessNotification), object: nil)*/
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(ShoppingCart.soldOutAlert), name: NSNotification.Name(rawValue: "SoldoutAlert"), object: nil)
 
         
+    }
+    
+    @objc func soldOutAlert()
+    {
+        self.showAlertView("Error", AlertMessage: "Sold Out", AlertButtonTitle: "OK")
     }
     
     /*@objc func selectedAddressSuccessful(_ notification : Notification)
@@ -798,6 +805,13 @@ class ShoppingCart: UIViewController, CheckoutCellDelegate,UITableViewDataSource
         
         Wardrober.exit()*/
 
+    }
+    
+    func showAlertView(_ AlertTitle: NSString, AlertMessage:NSString, AlertButtonTitle:NSString)
+    {
+        let alert=UIAlertController(title: AlertTitle as String, message: AlertMessage as String, preferredStyle: UIAlertControllerStyle.alert);
+        alert.addAction(UIAlertAction(title: AlertButtonTitle as String, style: UIAlertActionStyle.cancel, handler: nil));
+        self.present(alert, animated: true, completion: nil)
     }
     
    
