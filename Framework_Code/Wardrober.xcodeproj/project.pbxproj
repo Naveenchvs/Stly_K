@@ -50,8 +50,8 @@
 		B0795B0C202AD19800403F80 /* AcceptSDKCardFieldsValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF6202AD19700403F80 /* AcceptSDKCardFieldsValidator.swift */; };
 		B0795B0D202AD19800403F80 /* AcceptSDKStringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795AF7202AD19700403F80 /* AcceptSDKStringValidator.swift */; };
 		B0795B0F202AD1AE00403F80 /* PaymentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B0E202AD1AE00403F80 /* PaymentVC.swift */; };
-		B0795B11202AE0DA00403F80 /* PaymentCredentialsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B10202AE0DA00403F80 /* PaymentCredentialsHelper.swift */; };
-		B0795B13202AE19100403F80 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B12202AE19100403F80 /* Credentials.swift */; };
+		B0795B16202B205600403F80 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B15202B205500403F80 /* Credentials.swift */; };
+		B0795B18202B206000403F80 /* PaymentCredentialsHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0795B17202B206000403F80 /* PaymentCredentialsHelper.swift */; };
 		B07C04DA1EF287020005D944 /* FAProgressHud.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04D91EF287020005D944 /* FAProgressHud.swift */; };
 		B07C04F01EF2870D0005D944 /* FAImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04DB1EF2870D0005D944 /* FAImage.swift */; };
 		B07C04F11EF2870D0005D944 /* FAIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = B07C04DC1EF2870D0005D944 /* FAIndicator.swift */; };
@@ -204,8 +204,8 @@
 		B0795AF6202AD19700403F80 /* AcceptSDKCardFieldsValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKCardFieldsValidator.swift; sourceTree = "<group>"; };
 		B0795AF7202AD19700403F80 /* AcceptSDKStringValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AcceptSDKStringValidator.swift; sourceTree = "<group>"; };
 		B0795B0E202AD1AE00403F80 /* PaymentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentVC.swift; sourceTree = "<group>"; };
-		B0795B10202AE0DA00403F80 /* PaymentCredentialsHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentCredentialsHelper.swift; sourceTree = "<group>"; };
-		B0795B12202AE19100403F80 /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		B0795B15202B205500403F80 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Credentials.swift; path = Wardrober/Model/Credentials.swift; sourceTree = SOURCE_ROOT; };
+		B0795B17202B206000403F80 /* PaymentCredentialsHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaymentCredentialsHelper.swift; sourceTree = "<group>"; };
 		B07C04D91EF287020005D944 /* FAProgressHud.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAProgressHud.swift; sourceTree = "<group>"; };
 		B07C04DB1EF2870D0005D944 /* FAImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAImage.swift; sourceTree = "<group>"; };
 		B07C04DC1EF2870D0005D944 /* FAIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FAIndicator.swift; sourceTree = "<group>"; };
@@ -401,6 +401,13 @@
 			path = Validators;
 			sourceTree = "<group>";
 		};
+		B0795B14202B1FC200403F80 /* Recovered References */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Recovered References";
+			sourceTree = "<group>";
+		};
 		B07C04D61EF286CB0005D944 /* FAServiceClass */ = {
 			isa = PBXGroup;
 			children = (
@@ -452,6 +459,7 @@
 				C524E20F1ECB1BB100F7D45B /* Wardrober */,
 				C524E21A1ECB1BB100F7D45B /* WardroberTests */,
 				C524E20E1ECB1BB100F7D45B /* Products */,
+				B0795B14202B1FC200403F80 /* Recovered References */,
 			);
 			sourceTree = "<group>";
 		};
@@ -585,6 +593,8 @@
 		C5312FC61EEAB7D10086AF70 /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
+				B0795B17202B206000403F80 /* PaymentCredentialsHelper.swift */,
+				B0795B15202B205500403F80 /* Credentials.swift */,
 				C5312FC71EEAB7D10086AF70 /* ArrayExtension.swift */,
 				C5312FC81EEAB7D10086AF70 /* ClothingItemsHelper.swift */,
 				C5312FC91EEAB7D10086AF70 /* CommonHelper.swift */,
@@ -781,7 +791,6 @@
 				B07C04F81EF2870D0005D944 /* FAImageTransition.swift in Sources */,
 				C5312FD11EEAB7D10086AF70 /* CreateAccountHelper.swift in Sources */,
 				842A12A02004FBC1007BB5D7 /* DefaultAddressTVCell.swift in Sources */,
-				B0795B11202AE0DA00403F80 /* PaymentCredentialsHelper.swift in Sources */,
 				B07C05021EF2870D0005D944 /* FAThreadHelper.swift in Sources */,
 				842A12A32004FC1C007BB5D7 /* FloatLabelTextView.swift in Sources */,
 				84F540451FE7DECB0082EEDC /* FAAnimatedHanger.swift in Sources */,
@@ -790,6 +799,7 @@
 				C5312F7B1EEAB7AC0086AF70 /* CheckoutCell.swift in Sources */,
 				B07C04F71EF2870D0005D944 /* FARequestModifier.swift in Sources */,
 				C5312FAC1EEAB7BE0086AF70 /* BaseNavigationController.swift in Sources */,
+				B0795B18202B206000403F80 /* PaymentCredentialsHelper.swift in Sources */,
 				B0795AFF202AD19800403F80 /* AcceptSDKInternal.swift in Sources */,
 				C5312FD01EEAB7D10086AF70 /* CommonHelper.swift in Sources */,
 				B07C05031EF2870D0005D944 /* FAAnimatedImageView.swift in Sources */,
@@ -801,7 +811,6 @@
 				849688632007B43F0068E05F /* Address.swift in Sources */,
 				C5312FD41EEAB7D10086AF70 /* WardrobeHelper.swift in Sources */,
 				C5312FEC1EEAB7F50086AF70 /* ItemAssetSpecs.swift in Sources */,
-				B0795B13202AE19100403F80 /* Credentials.swift in Sources */,
 				C5312F861EEAB7AC0086AF70 /* FAFillColorButton.swift in Sources */,
 				C5312FBB1EEAB7BE0086AF70 /* TagDragDropVC.swift in Sources */,
 				B0795B00202AD19800403F80 /* AcceptSDKSettings.swift in Sources */,
@@ -843,6 +852,7 @@
 				84A09319202B033E009BD100 /* AvailabilityHelper.swift in Sources */,
 				C5312FBA1EEAB7BE0086AF70 /* SlideMenuVC.swift in Sources */,
 				C5312F851EEAB7AC0086AF70 /* FADotView.swift in Sources */,
+				B0795B16202B205600403F80 /* Credentials.swift in Sources */,
 				B0795AFA202AD19800403F80 /* AcceptSDKBaseURLBuilder.swift in Sources */,
 				B0795B07202AD19800403F80 /* FingerPrint.swift in Sources */,
 				B0795B04202AD19800403F80 /* AccepSDKtHttp.swift in Sources */,
